@@ -5,10 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Info</th>
+      <th>Category</th>
       <th>Gears</th>
       <th>Price</th>
-      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +17,11 @@
   <tbody>
     <% @bicycles.each do |bicycle| %>
       <tr>
+        <td><%= bicycle.id %></td>
         <td><%= bicycle.info %></td>
+        <td><%= bicycle.category.try(:name) %></td>
         <td><%= bicycle.gears %></td>
         <td><%= bicycle.price %></td>
-        <td><%= bicycle.category.try(:name) %></td>
         <td><%= link_to 'Show', bicycle %></td>
         <td><%= link_to 'Edit', edit_bicycle_path(bicycle) %></td>
         <td><%= link_to 'Destroy', bicycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>

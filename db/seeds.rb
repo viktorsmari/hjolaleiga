@@ -14,9 +14,9 @@ Category.find_or_create_by(name: "Street");
 
 5.times do |b|
   Bicycle.find_or_create_by(
-    info: "Info #{b}",
-    gears: 3,
-    price: 2999,
+    info: "Information about bicycle ",
+    gears: rand(3..21),
+    price: rand(2999..5999),
     category: Category.offset(rand(Category.count)).first
     )
 end
@@ -26,6 +26,7 @@ end
   Rental.find_or_create_by(
     start_date:Date.new(2016, 4, 4),
     end_date: Date.new(2016, 4, 5),
-    email: "email #{r}"
+    email: "email#{r}@example.com",
+    bicycle: Bicycle.offset(rand(Bicycle.count)).first
   )
 end
