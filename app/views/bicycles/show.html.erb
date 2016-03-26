@@ -17,7 +17,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @bicycle.category %>
+  <%= @bicycle.category.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_bicycle_path(@bicycle) %> |
