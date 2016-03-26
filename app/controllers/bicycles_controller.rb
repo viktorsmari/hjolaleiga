@@ -4,7 +4,11 @@ class BicyclesController < ApplicationController
   # GET /bicycles
   # GET /bicycles.json
   def index
-    @bicycles = Bicycle.all
+    if params[:category]
+      @bicycles = Bicycle.where(:category => params[:category])
+    else
+      @bicycles = Bicycle.all
+    end
   end
 
   # GET /bicycles/1
