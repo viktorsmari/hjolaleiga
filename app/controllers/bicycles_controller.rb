@@ -6,6 +6,7 @@ class BicyclesController < ApplicationController
   def index
     if params[:category]
       @bicycles = Bicycle.where(:category => params[:category])
+      flash[:notice] = "Number of bicycles in this category:"
     else
       @bicycles = Bicycle.all
     end
