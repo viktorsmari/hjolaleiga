@@ -22,3 +22,7 @@
 
 <%= link_to 'Edit', edit_bicycle_path(@bicycle) %> |
 <%= link_to 'Back', bicycles_path %>
+
+<h3>
+  <%= link_to "Rent this bicycle", new_rental_path(:bike => @bicycle.id) %>
+</h3>

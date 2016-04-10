@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require moment
+//= require fullcalendar
+
+
+$(document).ready(function() {
+
+  $('#calendar').fullCalendar({
+    firstDay: 1,
+
+    dayClick: function(){
+      alert('click day');
+    }
+
+  });
+
+  $('#calendar').fullCalendar('option', 'height', 590);
+});

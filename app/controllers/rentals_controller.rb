@@ -14,7 +14,13 @@ class RentalsController < ApplicationController
 
   # GET /rentals/new
   def new
-    @rental = Rental.new
+
+    if params[:bike]
+      @rental = Rental.new(:bicycle_id => params[:bike])
+      #@rental = Rental.new
+    else
+      @rental = Rental.new
+    end
   end
 
   # GET /rentals/1/edit
