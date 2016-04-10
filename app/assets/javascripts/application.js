@@ -25,7 +25,9 @@ $(document).ready(function() {
 
     dayClick: function(){
       alert('click day');
-    }
+    },
+
+    events: '/rentals.json'
 
   });
 
