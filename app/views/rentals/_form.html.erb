@@ -4,11 +4,33 @@
       <h2><%= pluralize(@rental.errors.count, "error") %> prohibited this rental from being saved:</h2>
 
       <ul>
-      <% @rental.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @rental.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
+  <% end %>
+
+  <% if params[:bike] %>
+
+    <hr />
+    <p>You are now booking this bicycle:</p>
+    <p>
+    <strong>Info:</strong>
+    <%= @rental.bicycle.try(:info) %>
+    </p>
+
+    <p>
+    <strong>Gears:</strong>
+    <%= @rental.bicycle.try(:gears) %>
+    </p>
+
+    <p>
+    <strong>Price:</strong>
+    <%= @rental.bicycle.try(:price) %>
+    </p>
+    <hr />
+
   <% end %>
 
   <div class="field">
@@ -22,10 +44,13 @@
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
+
+    <p>TODO: Confirm email or just suffice sending confirmation link</p>
+
   </div>
   <div class="field">
-    <%= f.label :bicycle_id %><br>
-    <%= f.text_field :bicycle_id %>
+    <%= f.hidden_field :bicycle_id %><br>
+    <%= f.hidden_field :bicycle_id, :readonly => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
