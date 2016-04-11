@@ -30,3 +30,4 @@ end
     bicycle: Bicycle.offset(rand(Bicycle.count)).first
   )
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
