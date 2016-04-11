@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <div class="alert alert-success">
+    <p id="notice"><%= notice %></p> 
+  </div>
+<% end %>
 
 <p>
   <strong>Start date:</strong>
@@ -17,7 +21,7 @@
 
 <p>
   <strong>Bicycle:</strong>
-  <%= @rental.bicycle %>
+  <%= @rental.bicycle.id %>
 </p>
 
 <%= link_to 'Edit', edit_rental_path(@rental) %> |

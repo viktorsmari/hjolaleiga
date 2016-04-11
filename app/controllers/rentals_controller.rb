@@ -32,6 +32,25 @@ class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
 
+    # Check if date is within range (not taken) for all ranges with bikes with this id
+    # get all ranges for this bike
+    
+    @allrent = Rental.where(:bicycle_id => @rental.bicycle_id)
+    puts "================"
+    puts @rental.start_date
+    puts @allrent.count
+    puts @rental.bicycle
+
+
+    @allrent.each do |r|
+      puts (@rental.start_date .. @rental.end_date).overlaps?(r.start_date .. r.end_date )
+      if (@rental.start_date .. @rental.end_date).overlaps?(r.start_date .. r.end_date )
+        puts "========== BREAK =========="
+        redirect_to @rental, notice: 'Rental dates overlap' and return
+        break
+      end
+    end
+
     respond_to do |format|
       if @rental.save
         format.html { redirect_to @rental, notice: 'Rental was successfully created.' }
