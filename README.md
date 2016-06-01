@@ -1,8 +1,8 @@
-== README
-
 # Hjolaleiga [![Build Status](https://travis-ci.org/viktorsmari/hjolaleiga.svg?branch=master)](https://travis-ci.org/viktorsmari/hjolaleiga)
 
+
 https://travis-ci.org/viktorsmari/hjolaleiga.svg?branch=master
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
