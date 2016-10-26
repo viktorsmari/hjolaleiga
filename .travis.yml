@@ -1,5 +1,7 @@
 language: ruby
 
+before_install:
+  - "echo ============================== OKOK"
 rvm:
   - 2.2
 
