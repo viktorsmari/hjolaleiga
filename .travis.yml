@@ -1,7 +1,10 @@
 language: ruby
-
 before_install:
-  - "echo ============================== OKOK"
+- echo TESTING TESTING OK
 rvm:
-  - 2.2
-
+- 2.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: Mjv+UbRikt6+UXm+4nv16oVmStHqQtoaL00mukA5R5mZyCugWuafGkVgBQF1VL8Y1rubzNDR6PGej41DnIJY8dIRyhZmFbO/oSHulpQJ2lJL80Wh5PgmiZ6p388GwYC0fM/X2IEJFfkcQdkADopcpbpDnWHaLxoQBM5HhLEsiXjmjVU9VAAcCkgi69iU4OGCrBjpd89btlQHLLUNy2OVhM+yn5688Sne9G0doc4fFepbxOKM+7n3BDWHMc6tIENUnzOoapy7FLhqQiakZbkfh7pfexH7l5pj1uSdxSdnOJdqEEZywsbbsJmOOTh/Ryqsoni08BaI2SKav4harHVyH5OEib6Q7nQl9OGhwaMrnLnjd8D9S9BtSRJKgLfjxv5jxr6dWEB+GGAanMPKHPNIEbZshE6vsRBPtM85dKNKQdpQEK6RkY8JDIHfaLt76WcVGIj5Bl1d9OdzH5iVRLEIpyz3jiwcFZ6Upsn8PENx19/moB7+Sq00gEtOCvlnI0TR+NJwuOE3N3gU5dWu27P9W2/VpBjkDEDzx/ZjM/WzIx8agoUI8wh0WXjRRHnmQJEiT2dsHg6hCqpIFR5fv//yAHrxpzPSDzx9SRaWn3r9dl21UEjnkisfTr5CYS/+458VLcznMh/Ge4jZeukgiryl5b+VAFGxv16+bwgzbxXNszQ=
+  app: hjolaleiga
