@@ -13,7 +13,7 @@ Start with
 
  `rails s`
 
-and visit http://localhost:3000
+and visit [http://localhost:3000]
 
 
 Insert test data with:
