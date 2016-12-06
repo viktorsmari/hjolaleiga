@@ -23,13 +23,30 @@
 $(document).ready(function() {
 
   $('#calendar').fullCalendar({
+    header: {
+      left: 'today',
+      center: 'title',
+      right: 'basicDay,basicWeek,month, prev,next '
+        },
     firstDay: 1,
 
     dayClick: function(){
       alert('click day');
     },
 
+    eventClick: function(){
+      console.log(this);
+      alert('event clicked..');
+    },
+    eventRender: function(event, element){
+      element.find('.fc-title').append("<br/>" + event.email);
+    },
+
+    eventColor: '#cba',
+    eventTextColor: '#a0f',
+    eventBorderColor: 'yellow',
     events: '/rentals.json'
+
 
   });
 
