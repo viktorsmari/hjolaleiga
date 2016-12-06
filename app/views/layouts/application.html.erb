@@ -7,12 +7,17 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
-    <%= link_to "Bicycle", bicycles_path %>
-    <%= link_to "Rental", rentals_path %>
-    <%= link_to "Admin", admin_rentals_path %>
-    <hr />
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= link_to "Bicycle", bicycles_path %>
+          <%= link_to "Rental", rentals_path %>
+          <%= link_to "Admin", admin_rentals_path %>
+          <hr />
+        </div>
+      </div>
+      <%= yield %>
+    </div> <!-- cont -->
 
   </body>
 </html>
