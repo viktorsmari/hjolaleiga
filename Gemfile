@@ -5,6 +5,8 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 gem 'devise'
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
@@ -14,7 +16,7 @@ source 'https://rails-assets.org' do
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '5.0.1'
 # Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg'
