@@ -2,6 +2,7 @@ language: ruby
 before_install:
 - echo TESTING TESTING OK
 - ruby -v
+- bundle
 - bin/rails db:migrate RAILS_ENV=test
 #rvm:
 #- 2.2
