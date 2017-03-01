@@ -16,13 +16,13 @@ class BicyclesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create bicycle" do
-    assert_difference('Bicycle.count') do
-      post :create, bicycle: { category_id: @bicycle.category_id, gears: @bicycle.gears, info: @bicycle.info, price: @bicycle.price }
-    end
-
-    assert_redirected_to bicycle_path(assigns(:bicycle))
-  end
+#  test "should create bicycle" do
+#    assert_difference('Bicycle.count') do
+#      post :create, bicycle: { category_id: @bicycle.category_id, gears: @bicycle.gears, info: @bicycle.info, price: @bicycle.price }
+#    end
+#
+#    assert_redirected_to bicycle_path(assigns(:bicycle))
+#  end
 
   test "should show bicycle" do
     get :show, id: @bicycle
@@ -34,10 +34,10 @@ class BicyclesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update bicycle" do
-    patch :update, id: @bicycle, bicycle: { category_id: @bicycle.category_id, gears: @bicycle.gears, info: @bicycle.info, price: @bicycle.price }
-    assert_redirected_to bicycle_path(assigns(:bicycle))
-  end
+#  test "should update bicycle" do
+#    patch :update, id: @bicycle, bicycle: { category_id: @bicycle.category_id, gears: @bicycle.gears, info: @bicycle.info, price: @bicycle.price }
+#    assert_redirected_to bicycle_path(assigns(:bicycle))
+#  end
 
   test "should destroy bicycle" do
     assert_difference('Bicycle.count', -1) do
