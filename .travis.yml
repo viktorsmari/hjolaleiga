@@ -2,8 +2,8 @@ language: ruby
 before_install:
 - echo TESTING TESTING OK
 - ruby -v
-rvm:
-- 2.2
+#rvm:
+#- 2.2
 deploy:
   provider: heroku
   api_key:
