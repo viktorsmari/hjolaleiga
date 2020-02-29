@@ -9,7 +9,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'devise'
 
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.4.1'
 
 gem 'puma'
 
